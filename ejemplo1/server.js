@@ -12,6 +12,10 @@ var ip    = ipadd.address();
 var name = process.env.MYNAME;
 
 app.get('/', function (req, res) {
+  res.status(200);
+});
+
+app.get('/home', function (req, res) {
   res.render('index', {port: port, ip: ip});
 });
 

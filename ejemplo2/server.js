@@ -23,6 +23,10 @@ mongoose.connect(connectionString, function (error) {
 });
 
 app.get('/', function (req, res) {
+  res.status(200);
+});
+
+app.get('/home', function (req, res) {
 	data = { "origin" : origin, "fecha" : Date.now() };
 	var rqst = new requests(data);
 	rqst.save(function (err, data){
