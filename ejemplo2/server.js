@@ -23,7 +23,7 @@ mongoose.connect(connectionString, function (error) {
 });
 
 app.get('/', function (req, res) {
-  res.status(200);
+  res.status(200).send("Success!");
 });
 
 app.get('/home', function (req, res) {
