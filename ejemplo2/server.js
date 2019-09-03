@@ -6,8 +6,8 @@ var express = require('express');
 	origin = process.env.MYORIGIN || 'TechiePoint',
 	userDB = process.env.MONGODB_USER
 	passDB = process.env.MONGODB_PASSWORD
-	ipDB = process.env.MONGODB_SERVICE
-	portDB = process.env.MONGODB_PORT
+	ipDB = process.env.DATABASE_SERVICE_NAME
+	portDB = process.env.MONGODB_PORT || 27017
 	nameDB = process.env.MONGODB_DATABASE
 	connectionString = 'mongodb://' + userDB + ':' + passDB + '@' + ipDB + ':' + portDB + '/' + nameDB;
 
