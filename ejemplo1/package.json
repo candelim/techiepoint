@@ -1,0 +1,20 @@
+{
+  "name": "Ejemplo1",
+  "version": "0.0.1",
+  "description": "Ejemplo de Node.js para TechiePoint 2.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "fs": "*",
+    "ip": "*"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Matias Candelieri <mjcandelieri@teco.com.ar>"
+}
