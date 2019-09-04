@@ -1,4 +1,3 @@
-![David](https://img.shields.io/david/dev/expressjs/express)
 # Techiepoint
 
 Repo para TechiePoint 2.0, con ejemplos para Openshift
