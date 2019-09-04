@@ -66,9 +66,23 @@ Más información puede obtenerse desde la documentación oficial de Openshift e
 
 ## Implementacion de Ejemplo 1
 
-BUILD de la aplicación
+###Creacion de la aplicación [BUILD + DEPLOY]
+Este comando genere el buildconfig [bc] en base código fuente y unando una builder image (S2I - source to image)
+El resultado genera un deployconfig [dc] en base a la imagen buildeada
 
 ```bash
-oc new-app https://github.com/candelim/techiepoint.git --context-dir=/ejemplo1 -l name=ejemplo1
+oc new-app https://github.com/candelim/techiepoint.git --context-dir=/ejemplo1 --name=ejemplo1
 ```
 
+###Creación de una ruta
+Se crea una ruta por defecto en el dominio que esté disponible
+
+```bash
+oc expose svc/ejemplo1
+```
+
+###Carga de variables de entorno
+Se modifica el deployconfig [dc] agregando variables de entorno. Otra alternativa es hacer esta carga por ConfigMaps o por Secrets
+```bash
+oc env dc/ejemplo1 MYNAME=Matias
+```
