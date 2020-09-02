@@ -1,4 +1,4 @@
-# Techiepoint
+# Techiepoint - 2
 
 Repo para TechiePoint 2.0, con ejemplos para Openshift
 Se trata de 2 ejemplos básicos usando nodejs (ejemplo1) y nodejs + mongodb (ejemplo2)
