@@ -87,7 +87,7 @@ Carga de variables de entorno
 
 Se modifica el deployconfig [dc] agregando variables de entorno. Otra alternativa es hacer esta carga por ConfigMaps o por Secrets
 ```bash
-oc env dc/ejemplo1 MYNAME=Matias
+oc set env deployment/ejemplo1 MYNAME=Matias
 ```
 Verificacion del servicio
 ```bash
@@ -135,7 +135,7 @@ Carga de variables de entorno
 Se modifica el deployconfig [dc] agregando variables de entorno. Otra alternativa es hacer esta carga por ConfigMaps o por Secrets
 
 ```bash
-oc env dc/ejemplo2 MYORIGIN=Origin
+oc set env deployment/ejemplo2 MYORIGIN=Origin
 ```
 
 Verificacion del servicio
@@ -144,4 +144,3 @@ Verificacion del servicio
 curl http://url-ejemplo-servicio-expuesto.com/home
 curl http://url-ejemplo-servicio-expuesto.com/count
 ```
-ejemplo con webhook
