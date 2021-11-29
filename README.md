@@ -58,7 +58,7 @@ oc new-app repo.git
 Los DEPLOYs pueden iniciarse en base a un build ya exitoso
 
 ```bash
-oc rollout latest dc/miaplicacion
+oc rollout latest deployment/miaplicacion
 ```
 
 Más información puede obtenerse desde la documentación oficial de Openshift en https://docs.openshift.com/container-platform/4.1/welcome/index.html 
@@ -119,7 +119,7 @@ Carga de variables de entorno
 
 Se deben cargar las variables de entorno para la conexión a la base de datos [la recomendación es que se usen secrets] 
 ```bash
-oc env dc/ejemplo2 MONGODB_USER=techiepoint MONGODB_PASSWORD=techiepoint123 DATABASE_SERVICE_NAME=techiepoint MONGODB_PORT=27017 MONGODB_DATABASE=ejemplo2 --overwrite
+oc set env deployment/ejemplo2 MONGODB_USER=techiepoint MONGODB_PASSWORD=techiepoint123 DATABASE_SERVICE_NAME=techiepoint MONGODB_PORT=27017 MONGODB_DATABASE=ejemplo2 --overwrite
 ```
 
 Creación de una ruta
